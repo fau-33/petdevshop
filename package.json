@@ -1,0 +1,35 @@
+{
+  "name": "petdevshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-dev": "nodemon -e ts,json,mustache src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fau-33/petdevshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/fau-33/petdevshop/issues"
+  },
+  "homepage": "https://github.com/fau-33/petdevshop#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/mustache-express": "^1.2.5",
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mustache-express": "^1.3.2",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2"
+  }
+}
