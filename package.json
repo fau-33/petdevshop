@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon -e ts,json,mustache src/server.ts"
+    "start-dev": "nodemon -e ts,json,mustache --exec \"node --loader ts-node/esm\" src/server.ts"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "@types/express": "^5.0.6",
     "@types/mustache-express": "^1.2.5",
     "@types/node": "^26.1.1",
-    "typescript": "^7.0.2"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
