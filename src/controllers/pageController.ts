@@ -1,37 +1,26 @@
 import type { Request, Response } from "express";
 
-export const home = (req: Request, res: Response) => {
+const renderPage = (
+  res: Response,
+  title: string,
+  background: string
+) => {
   res.render("pages/page", {
     banner: {
-      title: "Todos os animais",
-      background: "allanimals.jpg",
+      title,
+      background,
     },
   });
 };
 
-export const dogs = (req: Request, res: Response) => {
-  res.render("pages/page", {
-    banner: {
-      title: "Cachorros",
-      background: "banner_dog.jpg",
-    },
-  });
-};
+export const home = (_: Request, res: Response) =>
+  renderPage(res, "Todos os animais", "allanimals.jpg");
 
-export const cats = (req: Request, res: Response) => {
-  res.render("pages/page", {
-    banner: {
-      title: "Gatos",
-      background: "banner_cat.jpg",
-    },
-  });
-};
+export const dogs = (_: Request, res: Response) =>
+  renderPage(res, "Cachorros", "banner_dog.jpg");
 
-export const fishes = (req: Request, res: Response) => {
-  res.render("pages/page", {
-    banner: {
-      title: "Peixes",
-      background: "banner_fish.jpg",
-    },
-  });
-};
+export const cats = (_: Request, res: Response) =>
+  renderPage(res, "Gatos", "banner_cat.jpg");
+
+export const fishes = (_: Request, res: Response) =>
+  renderPage(res, "Peixes", "banner_fish.jpg");
